@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <title>Frontend Mentor | Interactive Rating Component</title>
+        <meta name="theme-color" content="#fb7413" />
+        <meta property="og:site_name" content="Interactive Rating Component" />
+        <meta property="og:title" content="Interactive Rating Component" />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://alexsans-rating-component.netlify.app/"
+        />
+        <meta property="og:image" content="https://i.imgur.com/pQrSsGu.png" />
+        <meta property="og:image:type" content="image/jpg" />
+        <meta property="og:image:width" content="1918" />
+        <meta property="og:image:height" content="946" />
+        <meta property="og:image:alt" content="Interactive rating component" />
+        <meta
+            property="og:description"
+            content="This a challenge from to Frontend Mentor, It is made with HTML5, CSS3 ans JS"
+        />
+        <link rel="stylesheet" href="./css/normalize.css" />
+        <link rel="stylesheet" href="./css/style.css" />
+        <title>Frontend Mentor | Interactive rating component</title>
+    </head>
+    <body>
+        <article class="card-rate">
+            <header class="card-rate__header">
+                <div class="card-rate__icon">
+                    <img src="./images/icon-star.svg" alt="star icon">
+                </div>
+                <h2 class="card-rate__title">How did we do?</h2>
+            </header>
+            <main class="card-rate__main">
+                <p class="card-rate__paragraph"> Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+                <form class="card-rate__form" id="form-rate" action="#">
+                    <div class="card-rate__radio-group">
+                        <div class="card-rate__group">
+                            <input class="card-rate__radio" type="radio" value="1" name="rate" id="rate-one">
+                            <label class="card-rate__label" for="rate-one">1</label>
+                        </div>
+                        <div class="card-rate__group">
+                            <input class="card-rate__radio" type="radio" value="2" name="rate" id="rate-two">
+                            <label class="card-rate__label" for="rate-two">2</label>
+                        </div>
+                        <div class="card-rate__group">
+                            <input class="card-rate__radio" type="radio" value="3" name="rate" id="rate-three">
+                            <label class="card-rate__label" for="rate-three">3</label>
+                        </div>
+                        <div class="card-rate__group">
+                            <input class="card-rate__radio" type="radio" value="4" name="rate" id="rate-four">
+                            <label class="card-rate__label" for="rate-four">4</label>
+                        </div>
+                        <div class="card-rate__group">
+                            <input class="card-rate__radio" type="radio" value="5" name="rate" id="rate-five">
+                            <label class="card-rate__label" for="rate-five">5</label>
+                        </div>
+                    </div>
+                    <button class="card-rate__button">Submit</button>
+                </form>
+            </main>
+        </article>
+        <script src="./js/app.js" type="text/javascript"></script>
+    </body>
+</html>

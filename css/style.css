@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    /* Primary colors */
+    --Orange: hsl(25, 97%, 53%);
+
+
+    /* Neutral colors */
+    --White: hsl(0, 0%, 100%);
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Medium-Grey: hsl(216, 12%, 54%);
+    --Dark-Blue: hsla(213, 19%, 18%, 100%);
+    --Very-Dark-Blue: hsl(216, 12%, 8%);
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--Very-Dark-Blue);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.card-rate {
+    display: flex;
+    flex-direction: column;
+    max-width: 325px;
+    background: radial-gradient(circle at 50% 0%, var(--Dark-Blue) 0%, var(--Very-Dark-Blue) 150%);
+    padding: 1.5rem;
+    border-radius: 1rem;
+}
+
+.card-rate--center {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+    .card-rate {
+        max-width: 370px;
+        padding: 1.4rem 1.8rem;
+        border-radius: 1.5rem;
+    }
+}
+
+.card-rate__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    padding: 1.2rem;
+    background-color: var(--Dark-Blue);
+    border-radius: 5rem;
+}
+
+.card-rate__icon>img {
+    width: 0.8rem;
+}
+
+
+@media screen and (min-width: 800px) {
+    .card-rate__icon {
+        padding: 1.4rem;
+    }
+
+    .card-rate__icon > img {
+        width: 1rem;
+    }
+}
+
+.card-rate__header {
+    margin-top: 1rem;
+}
+
+.card-rate__title {
+    font-weight: 700;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+    .card-rate__title {
+        font-size: 1.6rem;
+    }
+}
+
+.card-rate__paragraph {
+    color: var(--Medium-Grey);
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+}
+
+.card-rate__form {
+    margin-top: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-rate__radio-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+}
+
+.card-rate__radio {
+    display: none;
+}
+
+.card-rate__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Medium-Grey);
+    background-color: var(--Dark-Blue);
+    padding: 1.4rem 1.3rem 1.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 100%;
+    font-size: 14px;
+    transition: background-color 0.2s ease-in;
+}
+
+@media screen and (min-width: 800px) {
+    .card-rate__label {
+        padding: 1.5rem;
+    }
+}
+
+.card-rate__label:hover {
+    background-color: var(--Medium-Grey);
+    color: white;
+    cursor: pointer;
+}
+
+.card-rate__radio:checked+.card-rate__label {
+    background-color: var(--Orange);
+    color: white;
+}
+
+.card-rate__radio+input[type=radio]:checked {
+    background-color: var(--Orange);
+}
+
+.card-rate__button {
+    background-color: var(--Orange);
+    border: none;
+    border-radius: 2rem;
+    padding: 0.8rem 1.8rem;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    margin-top: 1.4rem;
+    transition: background-color 0.3s ease-in;
+}
+
+@media screen and (min-width: 800px) {
+    .card-rate__button {
+        margin-top: 1.6rem;
+    }
+}
+
+.card-rate__button:hover {
+    background-color: white;
+    color: var(--Orange);
+    cursor: pointer;
+}
+
+.card_rate__badge {
+    display: block;
+    margin: 1.2rem 0 1.6rem 0;
+    padding: 0.6rem 0.5rem 0.5rem;
+    border-radius: 2rem;
+    font-size: 0.85rem;
+    background-color: var(--Dark-Blue);
+    color: var(--Orange);
+}
+
+.animation-out {
+    animation: 0.2s forwards out;
+}
+
+.animation-in {
+    animation: 0.1s forwards in;
+    display: flex;
+}
+
+@keyframes out {
+    from {
+        filter: opacity(100%);
+    }
+
+    to {
+        filter: opacity(0);
+    }
+}
+
+@keyframes in {
+    from {
+        filter: opacity(0);
+    }
+
+    to {
+        filter: opacity(100%);
+    }
+}
