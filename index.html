@@ -32,42 +32,92 @@
         <title>Frontend Mentor | Interactive rating component</title>
     </head>
     <body>
-        <article class="card-rate" role="main">
-            <header class="card-rate__header">
+        <main>
+            <h1 class="hidden">Interactive rating component</h1>
+            <div class="card-rate">
                 <div class="card-rate__icon">
-                    <img src="./images/icon-star.svg" alt="star icon">
+                    <img src="./images/icon-star.svg" alt/>
                 </div>
                 <h2 aria-level="1" class="card-rate__title">How did we do?</h2>
-            </header>
-            <div class="card-rate__main">
-                <p class="card-rate__paragraph"> Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+                <p class="card-rate__paragraph">
+                    Please let us know how we did with your support request. All
+                    feedback is appreciated to help us improve our offering!
+                </p>
                 <form class="card-rate__form" id="form-rate" action="#">
-                    <div class="card-rate__radio-group">
+                    <fieldset class="card-rate__radio-group">
+                        <legend class="hidden">Select a rating!</legend>
                         <div class="card-rate__group">
-                            <input class="card-rate__radio" type="radio" value="1" name="rate" id="rate-one">
-                            <label class="card-rate__label" for="rate-one">1</label>
+                            <input
+                                class="card-rate__radio"
+                                type="radio"
+                                value="1"
+                                name="rate"
+                                id="rate-one"
+                            />
+                            <label class="card-rate__label" for="rate-one"
+                                >1</label
+                            >
                         </div>
                         <div class="card-rate__group">
-                            <input class="card-rate__radio" type="radio" value="2" name="rate" id="rate-two">
-                            <label class="card-rate__label" for="rate-two">2</label>
+                            <input
+                                class="card-rate__radio"
+                                type="radio"
+                                value="2"
+                                name="rate"
+                                id="rate-two"
+                            />
+                            <label class="card-rate__label" for="rate-two"
+                                >2</label
+                            >
                         </div>
                         <div class="card-rate__group">
-                            <input class="card-rate__radio" type="radio" value="3" name="rate" id="rate-three">
-                            <label class="card-rate__label" for="rate-three">3</label>
+                            <input
+                                class="card-rate__radio"
+                                type="radio"
+                                value="3"
+                                name="rate"
+                                id="rate-three"
+                            />
+                            <label class="card-rate__label" for="rate-three"
+                                >3</label
+                            >
                         </div>
                         <div class="card-rate__group">
-                            <input class="card-rate__radio" type="radio" value="4" name="rate" id="rate-four">
-                            <label class="card-rate__label" for="rate-four">4</label>
+                            <input
+                                class="card-rate__radio"
+                                type="radio"
+                                value="4"
+                                name="rate"
+                                id="rate-four"
+                            />
+                            <label class="card-rate__label" for="rate-four"
+                                >4</label
+                            >
                         </div>
                         <div class="card-rate__group">
-                            <input class="card-rate__radio" type="radio" value="5" name="rate" id="rate-five">
-                            <label class="card-rate__label" for="rate-five">5</label>
+                            <input
+                                class="card-rate__radio"
+                                type="radio"
+                                value="5"
+                                name="rate"
+                                id="rate-five"
+                            />
+                            <label class="card-rate__label" for="rate-five"
+                                >5</label
+                            >
                         </div>
-                    </div>
+                    </fieldset>
                     <button class="card-rate__button">Submit</button>
                 </form>
             </div>
-        </article>
+            <div class="card-rate card-rate--center animation-in hidden">
+                <img class="card-rate__img" src="./images/illustration-thank-you.svg" alt/>
+                <label class="card_rate__badge">You selected ${radioBtn.value} out of 5</label>
+                <h2 class="card-rate__title">Thank you!</h2>
+                <p class="card-rate__paragraph">We appreciate you taking the time to give a rating. If you ever need more support, don’t hesitate to get in touch!</p>
+            </div>
+        </main>
         <script src="./js/app.js"></script>
+        <!-- Thank you for your help and feedback @vcarames -->
     </body>
 </html>
